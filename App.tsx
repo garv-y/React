@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import ListGroup from "./Components/ListGroup";
 
 function NameList() {
   const [list, setList] = useState(["garv", "jitu", "kamal"]);
   const [name, setName] = useState(() => "");
+  console.log("NameList rendered");
 
   const onAddName = () => {
     setList([...list, name]);
@@ -47,6 +49,7 @@ function App() {
     <div>
       <Counter />
       <NameList />
+      <ListGroup />
     </div>
   );
 }
